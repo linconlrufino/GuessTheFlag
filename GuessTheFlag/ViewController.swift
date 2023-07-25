@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     
+    @IBOutlet var scoreboard: UILabel!
+    
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
@@ -24,17 +26,20 @@ class ViewController: UIViewController {
         askQuestion()
     }
     
-    
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
         
         if sender.tag == correctAnswer {
             title = "Correct"
             score += 1
+            scoreboard.text = "Score: \(score)"
         }else {
             title = "Wrong"
             score -= 1
+            scoreboard.text = "Score: \(score)"
         }
+        
+        changeButtonColor()
         
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
         
@@ -62,15 +67,38 @@ class ViewController: UIViewController {
     }
     
     func configureLayout() {
-        button1.layer.borderWidth = 1
-        button2.layer.borderWidth = 1
-        button3.layer.borderWidth = 1
         
-        button1.layer.borderColor = UIColor.lightGray.cgColor
-        button2.layer.borderColor = UIColor.lightGray.cgColor
-        button3.layer.borderColor = UIColor.lightGray.cgColor
+        button1.layer.borderWidth = 1
+        button1.layer.cornerRadius = 12
+        button1.layer.masksToBounds = true
+
+        button2.layer.borderWidth = 1
+        button2.layer.cornerRadius = 12
+        button2.layer.masksToBounds = true
+        
+        button3.layer.borderWidth = 1
+        button3.layer.cornerRadius = 12
+        button3.layer.masksToBounds = true
+        
+        button1.layer.borderColor = UIColor.corDaBorda.cgColor
+        button2.layer.borderColor = UIColor.corDaBorda.cgColor
+        button3.layer.borderColor = UIColor.corDaBorda.cgColor
         
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor :UIColor.black]
+        
+        scoreboard.text = "Score: \(score)"
+        scoreboard.layer.masksToBounds = true
+        scoreboard.layer.cornerRadius = 12
+        scoreboard.backgroundColor = UIColor.corDeFundoVerde
+        
+    }
+    
+    func changeButtonColor() {
+        if score >= 0 {
+            scoreboard.backgroundColor = UIColor.corDeFundoVerde
+        } else {
+            scoreboard.backgroundColor = UIColor.corDeFundoVermelho
+        }
     }
     
 }

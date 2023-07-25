@@ -11,42 +11,60 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessTheFlag" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4l-8j-scY">
-                                <rect key="frame" x="95" y="100" width="224" height="114"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4l-8j-scY">
+                                <rect key="frame" x="107" y="100" width="200" height="100"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us" imagePadding="0.0">
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lY7-Xt-Aaq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljy-9L-9Ar">
-                                <rect key="frame" x="95" y="388" width="224" height="114"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljy-9L-9Ar">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us">
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6fu-NE-hBU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPN-Ga-dTV">
-                                <rect key="frame" x="95" y="244" width="224" height="114"/>
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <buttonConfiguration key="configuration" style="plain" image="us">
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZS-54-sqx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVF-v4-aa4">
+                                <rect key="frame" x="85" y="584" width="244" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="Krv-sV-W7Q"/>
+                                    <constraint firstAttribute="height" constant="60" id="LBh-1s-RMv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.76078431372549016" green="0.87058823529411766" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ljy-9L-9Ar" firstAttribute="centerX" secondItem="yPN-Ga-dTV" secondAttribute="centerX" id="2rA-To-xkf"/>
                             <constraint firstItem="yPN-Ga-dTV" firstAttribute="centerX" secondItem="e4l-8j-scY" secondAttribute="centerX" id="31S-wS-idj"/>
                             <constraint firstItem="yPN-Ga-dTV" firstAttribute="top" secondItem="e4l-8j-scY" secondAttribute="bottom" constant="30" id="ERI-qp-reH"/>
+                            <constraint firstItem="xVF-v4-aa4" firstAttribute="top" secondItem="ljy-9L-9Ar" secondAttribute="bottom" constant="124" id="N4d-J6-3WL"/>
                             <constraint firstItem="e4l-8j-scY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nml-o5-CUr"/>
+                            <constraint firstItem="xVF-v4-aa4" firstAttribute="centerX" secondItem="ljy-9L-9Ar" secondAttribute="centerX" id="hxg-ez-yld"/>
                             <constraint firstItem="e4l-8j-scY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="uwY-1h-5qh"/>
                             <constraint firstItem="ljy-9L-9Ar" firstAttribute="top" secondItem="yPN-Ga-dTV" secondAttribute="bottom" constant="30" id="xBN-ly-tA4"/>
                         </constraints>
@@ -56,11 +74,12 @@
                         <outlet property="button1" destination="e4l-8j-scY" id="0N7-VS-ACL"/>
                         <outlet property="button2" destination="yPN-Ga-dTV" id="SZb-Aj-cV4"/>
                         <outlet property="button3" destination="ljy-9L-9Ar" id="jef-pa-j7I"/>
+                        <outlet property="scoreboard" destination="xVF-v4-aa4" id="E95-43-Tiw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="-2.0089285714285712"/>
+            <point key="canvasLocation" x="955.81395348837214" y="-3.218884120171674"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jri-LB-BU0">
