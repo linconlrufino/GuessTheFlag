@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var numberOfQuestionsAnswered = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
+        numberOfQuestionsAnswered += 1
+        
         var title: String
         
         if sender.tag == correctAnswer {
@@ -34,14 +37,19 @@ class ViewController: UIViewController {
             score += 1
             scoreboard.text = "Score: \(score)"
         }else {
-            title = "Wrong"
+            title = "Wrong! That’s the flag of \(countries[sender.tag])"
             score -= 1
             scoreboard.text = "Score: \(score)"
         }
         
         changeButtonColor()
         
+        
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+        
+        if numberOfQuestionsAnswered == 10 {
+            ac.message =  "Your final score is \(score)"
+        }
         
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         
@@ -50,6 +58,11 @@ class ViewController: UIViewController {
     }
     
     func askQuestion (action: UIAlertAction! = nil) {
+        
+        if numberOfQuestionsAnswered == 10 {
+            resetGame()
+        }
+        
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         
@@ -101,4 +114,9 @@ class ViewController: UIViewController {
         }
     }
     
+    func resetGame() {
+        score = 0
+        numberOfQuestionsAnswered = 0
+        scoreboard.text = "Score: \(score)"
+    }
 }
