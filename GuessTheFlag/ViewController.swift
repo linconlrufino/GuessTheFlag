@@ -44,7 +44,6 @@ class ViewController: UIViewController {
         
         changeButtonColor()
         
-        
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
         
         if numberOfQuestionsAnswered == 10 {
@@ -95,7 +94,7 @@ class ViewController: UIViewController {
         
         button1.layer.borderColor = UIColor.corDaBorda.cgColor
         button2.layer.borderColor = UIColor.corDaBorda.cgColor
-        button3.layer.borderColor = UIColor.corDaBorda.cgColor
+        button3.layer.borderColor = UIColor.corDaBorda.cgColor  
         
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor :UIColor.black]
         

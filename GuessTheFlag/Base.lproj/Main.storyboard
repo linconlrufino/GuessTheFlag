@@ -46,10 +46,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVF-v4-aa4">
-                                <rect key="frame" x="85" y="584" width="244" height="60"/>
+                                <rect key="frame" x="85" y="765" width="244" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="244" id="Krv-sV-W7Q"/>
-                                    <constraint firstAttribute="height" constant="60" id="LBh-1s-RMv"/>
+                                    <constraint firstAttribute="height" constant="77" id="gI9-Yi-TCh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -62,7 +62,7 @@
                             <constraint firstItem="ljy-9L-9Ar" firstAttribute="centerX" secondItem="yPN-Ga-dTV" secondAttribute="centerX" id="2rA-To-xkf"/>
                             <constraint firstItem="yPN-Ga-dTV" firstAttribute="centerX" secondItem="e4l-8j-scY" secondAttribute="centerX" id="31S-wS-idj"/>
                             <constraint firstItem="yPN-Ga-dTV" firstAttribute="top" secondItem="e4l-8j-scY" secondAttribute="bottom" constant="30" id="ERI-qp-reH"/>
-                            <constraint firstItem="xVF-v4-aa4" firstAttribute="top" secondItem="ljy-9L-9Ar" secondAttribute="bottom" constant="124" id="N4d-J6-3WL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xVF-v4-aa4" secondAttribute="bottom" constant="20" id="MXF-h3-uxZ"/>
                             <constraint firstItem="e4l-8j-scY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nml-o5-CUr"/>
                             <constraint firstItem="xVF-v4-aa4" firstAttribute="centerX" secondItem="ljy-9L-9Ar" secondAttribute="centerX" id="hxg-ez-yld"/>
                             <constraint firstItem="e4l-8j-scY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="uwY-1h-5qh"/>
